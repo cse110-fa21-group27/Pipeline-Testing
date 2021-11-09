@@ -4,12 +4,12 @@ on:
     branches:
       - main
     paths:
-      - 'css/**'
+      - '**.css'
   pull_request:
     branches:
       - main
     paths:
-      - 'css/**'
+      - '**.css'
   
 jobs:
   build:
