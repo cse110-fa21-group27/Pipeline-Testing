@@ -4,12 +4,12 @@ on:
     branches:
       - main
     paths:
-      - 'html/**'
+      - '**.html'
   pull_request:
     branches:
       - main
     paths:
-      - 'html/**'
+      - '**.html'
   
 jobs:
   build:
