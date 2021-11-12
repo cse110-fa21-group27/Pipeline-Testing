@@ -8,4 +8,8 @@ function myFunc(
   thisisgettingdumb
 ) {
   console.log("Hello World!");
+  let mybool = true
+  if (mybool){
+    console.log("YO")
+  }
 }
