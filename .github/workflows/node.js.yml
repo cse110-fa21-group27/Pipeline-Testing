@@ -38,6 +38,7 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Using Beautify
+        file_pattern: *.js
 #     - run: js-beautify test.js -o test1.js
 #     - name: Upload changed file
 #       uses: actions/upload-artifact@v2
