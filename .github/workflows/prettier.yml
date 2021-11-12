@@ -1,16 +1,16 @@
 name: Prettier
 on: [push]
 
-jobs:
-  build:
-    name: Prettier
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: bahmutov/npm-install@v1
+# jobs:
+#   build:
+#     name: Prettier
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - uses: bahmutov/npm-install@v1
       
-      - run: npm run format
-      - run: git status
-      - uses: cse110-fa21-group27/Pipeline-Testing@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       - run: npm run format
+#       - run: git status
+#       - uses: cse110-fa21-group27/Pipeline-Testing@main
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
