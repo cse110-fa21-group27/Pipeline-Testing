@@ -21,3 +21,14 @@ jobs:
         source_dir: ./js
         recurse: true
         output_dir: ./out
+    - name: Commit files
+      run: |
+        git config --local user.email "a1amaya@ucsd.edu"
+        git config --local user.name "ArturoAmaya"
+        git add --all
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
