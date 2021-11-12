@@ -32,7 +32,10 @@ jobs:
     - run: npm install --save-dev jest babel-jest @babel/core @babel/preset-env puppeteer jest-puppeteer
     
     - run: npm -g install js-beautify
-    - run: js-beautify test.js
+    - run: js-beautify -r test.js
+    - uses: tefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Using Beautify
 #     - run: js-beautify test.js -o test1.js
 #     - name: Upload changed file
 #       uses: actions/upload-artifact@v2
