@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: documentation2.js</title>
+    <title>JSDoc: Source: documentation4.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: documentation2.js</h1>
+    <h1 class="page-title">Source: documentation4.js</h1>
 
     
 
@@ -27,15 +27,28 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Solves equations of the form a * x = b
- * @example &lt;caption>Example usage of method1.&lt;/caption>
- * // returns 2
- * globalNS.method1(5, 10);
- * @returns {Number} Returns the value of x for the equation.
+ * Class representing a dot.
+ * @extends Point
  */
-globalNS.method1 = function (a, b) {
-    return b / a;
-};
+class Dot extends Point {
+    /**
+     * Create a dot.
+     * @param {number} x - The x value.
+     * @param {number} y - The y value.
+     * @param {number} width - The width of the dot, in pixels.
+     */
+    constructor(x, y, width) {
+        // ...
+    }
+
+    /**
+     * Get the dot's width.
+     * @return {number} The dot's width, in pixels.
+     */
+    getWidth() {
+        // ...
+    }
+}
 </code></pre>
         </article>
     </section>
