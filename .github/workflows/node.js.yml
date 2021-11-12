@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run build --if-present
-    - run: node test.js
+#     - run: node test.js
     - run: npm install --save-dev jest babel-jest @babel/core @babel/preset-env puppeteer jest-puppeteer
     - run: npm -g install js-beautify
     - run: js_beautify test.js 1> test.js
