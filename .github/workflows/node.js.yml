@@ -35,17 +35,9 @@ jobs:
     
     - run: npm -g install js-beautify
     - run: js-beautify -r test.js
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Using Beautify
-        file_pattern: *.js
-#     - run: js-beautify test.js -o test1.js
-#     - name: Upload changed file
-#       uses: actions/upload-artifact@v2
-#       with:
-#         name: test1
-#         path: test1.js
-#     - name: Dowload changed file
-#       uses: actions/download-artifact@v2
-#       with:
-#         name: test1
+    - run: git config user.name "GitHub Actions Bot"
+    - run: git config user.email "<>"
+    - run: git add test.js
+    - run: git commit -m "Beautify code"
+    - run: git push origin master
+
