@@ -33,11 +33,11 @@ jobs:
 #     - run: node test.js
     - run: npm install --save-dev jest babel-jest @babel/core @babel/preset-env puppeteer jest-puppeteer
     
-    - run: npm -g install js-beautify
-    - run: js-beautify -r test.js
-    - run: git config user.name "GitHub Actions Bot"
-    - run: git config user.email "<>"
-    - run: git add test.js
-    - run: git commit -m "Beautify code"
-    - run: git push origin master
+#     - run: npm -g install js-beautify
+#     - run: js-beautify -r test.js
+#     - run: git config user.name "GitHub Actions Bot"
+#     - run: git config user.email "<>"
+#     - run: git add test.js
+#     - run: git commit -m "Beautify code"
+#     - run: git push origin master
 
