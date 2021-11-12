@@ -31,7 +31,7 @@ jobs:
 #     - run: node test.js
     - run: npm install --save-dev jest babel-jest @babel/core @babel/preset-env puppeteer jest-puppeteer
     - run: npm -g install js-beautify
-    - run: js-beautify test.js -o test.js
+    - run: js-beautify test.js -o test1.js
     - name: Upload changed file
       uses: actions/upload-artifact@v2
       with:
