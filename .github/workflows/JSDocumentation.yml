@@ -21,7 +21,7 @@ jobs:
         output_dir: ./out
     - name: Commit files
       run: |
-        ls ./out | echo
+        echo ./out/index.html
         git config --local user.email "a1amaya@ucsd.edu"
         git config --local user.name "ArturoAmaya"
         git add --all
