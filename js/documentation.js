@@ -9,5 +9,5 @@
  * @returns {Number} Returns the value of x for the equation.
  */
 globalNS.method1 = function (a, b) {
-    return b / a
+  return b / a
 }
