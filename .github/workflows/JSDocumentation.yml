@@ -1,0 +1,29 @@
+name: Documentation
+
+on:
+  pull_request:
+    branches: [ main ]
+
+# jobs:
+#   build:
+
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - uses: actions/checkout@v2
+#       with:
+#         ref: ${{ github.head_ref }}
+#     - name: Build Documentation file
+#       uses: andstor/jsdoc-action@v1
+#       with:
+#         source_dir: ./js
+#         recurse: true
+#         output_dir: ./out
+#     - name: Commit files
+#       run: |
+#         cat ./out/index.html
+#         git config --local user.email "a1amaya@ucsd.edu"
+#         git config --local user.name "ArturoAmaya"
+#         git add --all
+#         git commit -m "Add changes" -a
+#         git push
