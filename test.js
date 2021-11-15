@@ -5,4 +5,6 @@ var b, c, d, e, f
 
 if ('this_is' == /an_example/) {
   of_beautifier()
-} else {var a = b ? c % d : e[f]}
+} else {
+  var a = b ? c % d : e[f]
+}
