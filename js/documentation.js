@@ -1,7 +1,7 @@
 /**
  * Solves equations of the form a * x = b
  * wow look these have been edited!
- * wow look this is different
+ * wow look this is different this is also different please work
  * @example
  * // returns 2
  * globalNS.method1(5, 10);
