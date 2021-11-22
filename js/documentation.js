@@ -1,5 +1,6 @@
 /**
  * Solves equations of the form a * x = b
+ * wow look these have been edited!
  * @example
  * // returns 2
  * globalNS.method1(5, 10);
