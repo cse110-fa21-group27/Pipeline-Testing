@@ -1,29 +1,28 @@
-name: Documentation
+name: GitHub pages
 
 on:
-  pull_request:
-    branches: [ main ]
+  push:
+    branches:
+      - master
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: ${{ github.head_ref }}
-    - name: Build Documentation file
-      uses: andstor/jsdoc-action@v1
-      with:
-        source_dir: ./js
-        recurse: true
-        output_dir: ./out
-    - name: Commit files
-      run: |
-        cat ./out/index.html
-        git config --local user.email "a1amaya@ucsd.edu"
-        git config --local user.name "ArturoAmaya"
-        git add --all
-        git commit -m "Add changes" -a
-        git push
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./src
+          output_dir: ./out
+          config_file: conf.json
+          template: minami
+          front_page: README.md
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./out
